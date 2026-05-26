@@ -1,0 +1,6 @@
+{
+  "name": "PS4 Icon Customizer",
+  "description": "Connect to your PS4 via FTP on port 2121 to replace custom game/app icons over Scoped Storage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
