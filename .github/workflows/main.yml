@@ -7,9 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./app
 
     steps:
     - uses: actions/checkout@v4
@@ -24,7 +21,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    # هذا الأمر سيبني التطبيق بدون الحاجة لأي مفاتيح خارجية
     - name: Build with Gradle
       run: ./gradlew assembleDebug
 
