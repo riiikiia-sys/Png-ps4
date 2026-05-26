@@ -16,15 +16,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # البحث عن gradlew في أي مكان ومنحه صلاحية التنفيذ
-    - name: Grant execute permission for gradlew
-      run: |
-        chmod +x $(find . -name "gradlew")
-
-    # بناء التطبيق باستخدام الملف الذي تم العثور عليه
+    # نستخدم Gradle Wrapper المدمج أو نقوم ببنائه مباشرة
     - name: Build with Gradle
-      run: |
-        ./$(find . -name "gradlew") assembleDebug
+      run: gradle assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
